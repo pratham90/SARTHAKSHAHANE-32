@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+
 import { Play, Clock, Users, ExternalLink } from "lucide-react";
+import NikeAd from "../assets/Nike Running _ Spec Ad.mp4";
 
 const JordanStories = () => {
   const stories = [
@@ -77,6 +79,16 @@ const JordanStories = () => {
 
   return (
     <section id="stories" className="py-20 px-6 bg-gradient-subtle">
+      <div className="max-w-4xl mx-auto mb-12 rounded-xl overflow-hidden shadow-lg">
+        <video
+          src={NikeAd}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-96 object-cover"
+        />
+      </div>
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">

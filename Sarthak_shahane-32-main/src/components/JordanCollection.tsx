@@ -1,7 +1,15 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Star, Calendar } from "lucide-react";
 import { useState } from "react";
+import AIRJORDAN1HIGHG from "../assets/AIRJORDAN1HIGHG-removebg-preview.png";
+import AIRJORDAN1HIGHG_1 from "../assets/AIRJORDAN1HIGHG__1_-removebg-preview.png";
+import AIRJORDAN1HIGHG_2 from "../assets/AIRJORDAN1HIGHG__2_-removebg-preview.png";
+import WMNSAIRJORDAN1MID_1 from "../assets/WMNSAIRJORDAN1MID__1_-removebg-preview.png";
+import WMNSAIRJORDAN1MID_2 from "../assets/WMNSAIRJORDAN1MID__2_-removebg-preview.png";
+import WMNSAIRJORDAN1MID_3 from "../assets/WMNSAIRJORDAN1MID__3_-removebg-preview.png";
+
 
 const JordanCollection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -22,7 +30,7 @@ const JordanCollection = () => {
       category: "retro",
       price: "$170",
       rating: 4.9,
-      image: "🔴",
+  image: AIRJORDAN1HIGHG,
       description: "The one that started it all. Banned by the NBA, loved by the world.",
       featured: true,
       sizes: "7-18",
@@ -36,7 +44,7 @@ const JordanCollection = () => {
       category: "classic",
       price: "$220",
       rating: 5.0,
-      image: "⚫",
+  image: AIRJORDAN1HIGHG_1,
       description: "Patent leather perfection. Championship legacy.",
       featured: true,
       sizes: "7-18",
@@ -50,7 +58,7 @@ const JordanCollection = () => {
       category: "retro",
       price: "$200",
       rating: 4.8,
-      image: "⚪",
+  image: AIRJORDAN1HIGHG_2,
       description: "Flight meets style. Tinker Hatfield's masterpiece.",
       featured: false
     },
@@ -62,7 +70,7 @@ const JordanCollection = () => {
       category: "classic",
       price: "$190",
       rating: 4.9,
-      image: "🖤",
+  image: WMNSAIRJORDAN1MID_1,
       description: "The Jumpman debut. Elephant print iconic.",
       featured: false
     },
@@ -74,7 +82,7 @@ const JordanCollection = () => {
       category: "limited",
       price: "$190",
       rating: 4.7,
-      image: "🤒",
+  image: WMNSAIRJORDAN1MID_2,
       description: "The game that became legend. Sick performance.",
       featured: true
     },
@@ -86,7 +94,7 @@ const JordanCollection = () => {
       category: "retro",
       price: "$190",
       rating: 4.8,
-      image: "🔥",
+  image: WMNSAIRJORDAN1MID_3,
       description: "First championship shoe. Ring ceremony ready.",
       featured: false
     }
@@ -175,9 +183,11 @@ const JordanCollection = () => {
 
                 {/* Shoe Image Area */}
                 <div className="relative h-64 bg-gradient-subtle flex items-center justify-center group-hover:bg-gradient-fire/10 transition-all duration-500">
-                  <div className="text-8xl group-hover:scale-110 transition-transform duration-500">
-                    {sneaker.image}
-                  </div>
+                  <img
+                    src={sneaker.image}
+                    alt={sneaker.name}
+                    className="max-h-56 object-contain group-hover:scale-110 transition-transform duration-500"
+                  />
                   
                   {/* Overlay on hover */}
               <div className="absolute inset-0 bg-gradient-fire opacity-0 group-hover:opacity-10 transition-all duration-500" />
